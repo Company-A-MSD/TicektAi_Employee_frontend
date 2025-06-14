@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# TicketAi Employee Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the Employee/Admin frontend for TicketAi, built with [React](https://react.dev/), [Vite](https://vitejs.dev/), and [Tailwind CSS](https://tailwindcss.com/). The project is configured for deployment on [Firebase Hosting](https://firebase.google.com/docs/hosting).
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+```
+.
+├── .firebaserc
+├── .gitignore
+├── firebase.json
+├── index.html
+├── package.json
+├── README.md
+├── vite.config.mjs
+├── public/
+│   ├── favicon.ico
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── App.jsx
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.jsx
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+└── .github/
+    └── workflows/
+        ├── firebase-hosting-merge.yml
+        └── firebase-hosting-pull-request.yml
+```
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [npm](https://www.npmjs.com/)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+    ```sh
+    git clone <repository-url>
+    cd TicektAi_Employee_frontend
+    ```
 
-### `npm run build`
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+npm start
+```
 
-### `npm run eject`
+- The app will be available at [http://localhost:3000](http://localhost:3000).
+- The browser will open automatically.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Building for Production
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To build the app for production:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- The optimized build will be output to the `build` directory.
 
-## Learn More
+### Testing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run tests using:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm test
+```
 
-### Code Splitting
+- Uses [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Deployment
 
-### Analyzing the Bundle Size
+Deployment is configured for Firebase Hosting. See [firebase.json](firebase.json) and [vite.config.mjs](vite.config.mjs).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- On push to `main`, the app is automatically built and deployed via GitHub Actions ([.github/workflows/firebase-hosting-merge.yml](.github/workflows/firebase-hosting-merge.yml)).
+- On pull requests, a preview is deployed ([.github/workflows/firebase-hosting-pull-request.yml](.github/workflows/firebase-hosting-pull-request.yml)).
 
-### Making a Progressive Web App
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Firebase Hosting](https://firebase.google.com/docs/hosting)
+- [Jest](https://jestjs.io/)
+- [React Testing Library](https://testing-library.com/)
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is for educational purposes.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Note:** For environment-specific settings, use `.env` files as needed
