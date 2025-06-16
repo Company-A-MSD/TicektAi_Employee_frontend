@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "ticketai-employee",
-    "public": "build",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
